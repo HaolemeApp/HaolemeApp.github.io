@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haolemeapp.github.io/sitemap.xml

@@ -1,5 +1,6 @@
 # HaolemeApp.github.io
 
-Official website for [Haoleme](https://github.com/HaolemeApp/Haoleme).
+Official website for Haoleme.
 
-The site is published at [haolemeapp.github.io](https://haolemeapp.github.io/).
+- Official website: https://haolemeapp.github.io/
+- GitHub repository: https://github.com/HaolemeApp/Haoleme

@@ -50,6 +50,7 @@ const translations = {
     downloadLatest: "下载最新版",
     footerText: "命令运行监控，从终端到手机。",
     footerDownload: "下载",
+    officialWebsiteLabel: "官网",
     copied: "安装命令已复制"
   },
   en: {
@@ -103,6 +104,7 @@ const translations = {
     downloadLatest: "Download latest",
     footerText: "Command monitoring, from terminal to phone.",
     footerDownload: "Download",
+    officialWebsiteLabel: "Website",
     copied: "Install command copied"
   }
 };
