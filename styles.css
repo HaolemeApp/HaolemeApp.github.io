@@ -198,8 +198,8 @@ html[data-theme="dark"] .icon-dark {
 .hero {
   position: relative;
   height: calc(100svh - var(--nav-height) - 64px);
-  min-height: 580px;
-  max-height: 700px;
+  min-height: 620px;
+  max-height: 740px;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
@@ -217,7 +217,7 @@ html[data-theme="dark"] .icon-dark {
   position: relative;
   z-index: 5;
   width: min(610px, 56%);
-  padding: 48px 0 60px;
+  padding: 40px 0 44px;
 }
 
 .eyebrow,
@@ -379,10 +379,10 @@ html[data-theme="dark"] .icon-dark {
 .product-scene {
   position: absolute;
   z-index: 2;
-  top: 30px;
-  right: -72px;
-  width: 560px;
-  height: 650px;
+  top: 20px;
+  right: -60px;
+  width: 620px;
+  height: 690px;
 }
 
 .product-scene::before {
@@ -396,8 +396,8 @@ html[data-theme="dark"] .icon-dark {
 
 .phone {
   position: absolute;
-  width: 258px;
-  height: 554px;
+  width: 300px;
+  height: 647px;
   padding: 8px;
   border: 1px solid #202226;
   border-radius: 34px;
@@ -407,6 +407,7 @@ html[data-theme="dark"] .icon-dark {
 }
 
 .phone img {
+  display: block;
   width: 100%;
   height: 100%;
   border-radius: 27px;
@@ -416,16 +417,15 @@ html[data-theme="dark"] .icon-dark {
 
 .phone-front {
   z-index: 3;
-  right: 34px;
+  right: 18px;
   bottom: 0;
 }
 
 .phone-back {
   z-index: 1;
-  left: 38px;
-  bottom: 32px;
-  transform: rotate(-5deg);
-  opacity: 0.72;
+  left: 18px;
+  bottom: 22px;
+  opacity: 0.82;
 }
 
 .phone-speaker {
@@ -444,8 +444,8 @@ html[data-theme="dark"] .icon-dark {
   position: absolute;
   z-index: 6;
   top: 0;
-  right: 12px;
-  width: 370px;
+  right: 0;
+  width: 390px;
   border: 1px solid var(--line-strong);
   border-radius: 8px;
   background: #16181c;
@@ -494,50 +494,51 @@ html[data-theme="dark"] .icon-dark {
 .term-blue { color: #70a9ff; }
 .term-success { color: #55d98d; }
 
-.signal-strip {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--line);
-  background: var(--page);
+.hero-signals {
+  width: min(100%, 560px);
+  margin-top: 16px;
 }
 
 .signal-inner {
-  width: min(860px, calc(100% - 40px));
-  min-height: 84px;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 58px;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-  box-shadow: var(--shadow-small);
-  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .signal-item {
   min-width: 0;
-  padding: 16px 22px;
+  padding: 10px 12px;
   display: grid;
   grid-template-columns: auto 1fr;
   align-content: center;
-  gap: 3px 14px;
+  gap: 2px 8px;
   border-right: 1px solid var(--line);
 }
 
 .signal-item:first-child {
-  border-left: 0;
+  padding-left: 0;
+}
+
+.signal-item:last-child {
+  padding-right: 0;
+  border-right: 0;
 }
 
 .signal-item strong {
   grid-row: 1 / 3;
   align-self: center;
-  font-size: 42px;
+  font-size: 28px;
   line-height: 1;
 }
 
 .signal-item span {
   align-self: end;
   color: var(--ink);
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 750;
 }
 
@@ -545,7 +546,7 @@ html[data-theme="dark"] .icon-dark {
 .signal-item small {
   align-self: start;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .section {
@@ -1008,8 +1009,8 @@ footer {
   }
 
   .product-scene {
-    right: -150px;
-    transform: scale(0.9);
+    right: -190px;
+    transform: none;
   }
 
   .nav-links {
@@ -1028,7 +1029,6 @@ footer {
 
   .nav-shell,
   .hero-inner,
-  .signal-inner,
   .section-inner,
   .download-inner,
   .footer-inner {
@@ -1073,23 +1073,23 @@ footer {
   }
 
   .signal-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 0;
   }
 
   .signal-item,
   .signal-item:first-child {
-    min-height: 76px;
+    min-height: 58px;
     border: 0;
-    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
   }
 
   .signal-item strong {
-    font-size: 36px;
+    font-size: 26px;
   }
 
   .signal-item:last-child {
-    border-bottom: 0;
+    border-right: 0;
   }
 
   .section {
@@ -1144,7 +1144,34 @@ footer {
 
 @media (max-width: 520px) {
   .signal-inner {
-    width: min(330px, calc(100% - 32px));
+    width: 100%;
+  }
+
+  .signal-item,
+  .signal-item:first-child {
+    min-height: 52px;
+    padding: 8px 6px;
+  }
+
+  .signal-item:first-child {
+    padding-left: 0;
+  }
+
+  .signal-item:last-child {
+    padding-right: 0;
+  }
+
+  .signal-item strong {
+    font-size: 24px;
+  }
+
+  .signal-item span {
+    font-size: 10px;
+  }
+
+  .signal-item code,
+  .signal-item small {
+    font-size: 9px;
   }
 
   .brand span {
