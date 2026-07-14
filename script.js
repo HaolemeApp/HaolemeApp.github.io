@@ -107,6 +107,19 @@ const translations = {
   }
 };
 
+const screenshots = {
+  zh: {
+    home: "assets/screenshots/home-zh.png",
+    settings: "assets/screenshots/settings-zh.png",
+    homeAlt: "好了么命令运行列表"
+  },
+  en: {
+    home: "assets/screenshots/home-en.png",
+    settings: "assets/screenshots/settings-en.png",
+    homeAlt: "Haoleme command run list"
+  }
+};
+
 const root = document.documentElement;
 const themeToggle = document.getElementById("theme-toggle");
 const copyButton = document.getElementById("copy-install");
@@ -140,6 +153,9 @@ function applyLanguage(language) {
     button.classList.toggle("active", button.dataset.lang === lang);
     button.setAttribute("aria-pressed", button.dataset.lang === lang ? "true" : "false");
   });
+  document.querySelector('[data-screenshot="home"]').src = screenshots[lang].home;
+  document.querySelector('[data-screenshot="home"]').alt = screenshots[lang].homeAlt;
+  document.querySelector('[data-screenshot="settings"]').src = screenshots[lang].settings;
   localStorage.setItem("haoleme-language", lang);
 }
 
