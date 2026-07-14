@@ -615,6 +615,11 @@ html[data-theme="dark"] .icon-dark {
   margin-bottom: 0;
 }
 
+.feature-card:not(.feature-wide) .feature-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .feature-icon.green { color: var(--green); background: color-mix(in srgb, var(--green) 10%, var(--surface)); }
 .feature-icon.blue { color: var(--blue); background: color-mix(in srgb, var(--blue) 10%, var(--surface)); }
 .feature-icon.red { color: var(--red); background: color-mix(in srgb, var(--red) 10%, var(--surface)); }
@@ -738,7 +743,8 @@ html[data-theme="dark"] .cipher {
 .step > svg {
   width: 36px;
   height: 36px;
-  margin: 10px 0 26px;
+  margin: 10px auto 26px;
+  display: block;
   color: var(--red-dark);
 }
 
@@ -863,8 +869,8 @@ html[data-theme="dark"] .cipher {
 }
 
 .download-inner {
-  width: min(1100px, calc(100% - 40px));
-  min-height: 188px;
+  width: min(900px, calc(100% - 40px));
+  min-height: 172px;
   margin: 0 auto;
   padding: 30px 36px;
   border: 1px solid var(--line);
@@ -885,7 +891,7 @@ html[data-theme="dark"] .cipher {
 }
 
 .download-inner h2 {
-  font-size: 46px;
+  font-size: 38px;
 }
 
 .download-inner .section-label {
