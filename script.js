@@ -51,6 +51,8 @@ const translations = {
     footerText: "命令运行监控，从终端到手机。",
     footerDownload: "下载",
     officialWebsiteLabel: "官网",
+    themeToLight: "切换浅色主题",
+    themeToDark: "切换深色主题",
     copied: "安装命令已复制"
   },
   en: {
@@ -105,6 +107,8 @@ const translations = {
     footerText: "Command monitoring, from terminal to phone.",
     footerDownload: "Download",
     officialWebsiteLabel: "Website",
+    themeToLight: "Switch to light theme",
+    themeToDark: "Switch to dark theme",
     copied: "Install command copied"
   }
 };
@@ -137,14 +141,16 @@ function preferredTheme() {
 function applyTheme(theme) {
   root.dataset.theme = theme;
   const dark = theme === "dark";
-  themeToggle.setAttribute("aria-label", dark ? "切换浅色主题" : "切换深色主题");
-  themeToggle.setAttribute("title", dark ? "切换浅色主题" : "切换深色主题");
+  const language = root.lang.startsWith("zh") ? "zh" : "en";
+  const label = dark ? translations[language].themeToLight : translations[language].themeToDark;
+  themeToggle.setAttribute("aria-label", label);
+  themeToggle.setAttribute("title", label);
   themeToggle.innerHTML = `<i data-lucide="${dark ? "sun" : "moon"}" aria-hidden="true"></i>`;
   if (window.lucide) window.lucide.createIcons();
 }
 
 function applyLanguage(language) {
-  const lang = translations[language] ? language : "zh";
+  const lang = translations[language] ? language : "en";
   root.lang = lang === "zh" ? "zh-CN" : "en";
   document.title = lang === "zh" ? "好了么 · Haoleme" : "Haoleme · Command monitoring";
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -158,6 +164,7 @@ function applyLanguage(language) {
   document.querySelector('[data-screenshot="home"]').src = screenshots[lang].home;
   document.querySelector('[data-screenshot="home"]').alt = screenshots[lang].homeAlt;
   document.querySelector('[data-screenshot="settings"]').src = screenshots[lang].settings;
+  applyTheme(root.dataset.theme || preferredTheme());
   localStorage.setItem("haoleme-language", lang);
 }
 
@@ -200,5 +207,5 @@ copyButton.addEventListener("click", async () => {
 });
 
 applyTheme(preferredTheme());
-applyLanguage(localStorage.getItem("haoleme-language") || (navigator.language.startsWith("zh") ? "zh" : "en"));
+applyLanguage(localStorage.getItem("haoleme-language") || "en");
 if (window.lucide) window.lucide.createIcons();

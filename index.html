@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f6f8">
-  <meta name="description" content="好了么 Haoleme - 在手机上查看电脑和服务器里的命令运行状态与控制台输出。">
+  <meta name="description" content="Haoleme monitors commands running on your computers and servers from your phone, with live console output and finish notifications.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="keywords" content="Haoleme, 好了么, hao CLI, 命令监控, 终端监控, Android, 服务器监控">
+  <meta name="keywords" content="Haoleme, hao CLI, command monitoring, terminal monitoring, Android, server monitoring, 好了么">
   <link rel="canonical" href="https://haolemeapp.github.io/">
-  <meta property="og:title" content="好了么 · Haoleme">
-  <meta property="og:description" content="离开终端，任务结束时手机会告诉你。">
+  <meta property="og:title" content="Haoleme · Command monitoring">
+  <meta property="og:description" content="Let the command run. Your phone tells you when it finishes.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Haoleme · 好了么">
-  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Haoleme">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://haolemeapp.github.io/">
   <meta property="og:image" content="https://haolemeapp.github.io/assets/haoleme-icon-light.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="好了么 · Haoleme">
-  <meta name="twitter:description" content="在手机上查看电脑和服务器里的命令运行状态与控制台输出。">
+  <meta name="twitter:title" content="Haoleme · Command monitoring">
+  <meta name="twitter:description" content="Monitor command status and console output from your phone.">
   <meta name="twitter:image" content="https://haolemeapp.github.io/assets/haoleme-icon-light.png">
-  <title>好了么 · Haoleme</title>
+  <title>Haoleme · Command monitoring</title>
   <link rel="icon" href="assets/haoleme-icon-light.png">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -28,9 +28,9 @@
     "@graph": [
       {
         "@type": "WebSite",
-        "name": "Haoleme · 好了么",
+        "name": "Haoleme",
         "url": "https://haolemeapp.github.io/",
-        "description": "在手机上查看电脑和服务器里的命令运行状态与控制台输出。",
+        "description": "Monitor command status and console output from your phone.",
         "sameAs": [
           "https://github.com/HaolemeApp/Haoleme",
           "https://pypi.org/project/haoleme/"
@@ -64,22 +64,22 @@
       <a class="brand" href="#top" aria-label="Haoleme home">
         <img class="brand-icon icon-light" src="assets/haoleme-icon-light.png" alt="">
         <img class="brand-icon icon-dark" src="assets/haoleme-icon-dark.png" alt="">
-        <span data-i18n="brand">好了么</span>
+        <span data-i18n="brand">Haoleme</span>
       </a>
 
       <div class="nav-links">
-        <a href="#features" data-i18n="navFeatures">功能</a>
-        <a href="#how" data-i18n="navHow">使用</a>
-        <a href="#security" data-i18n="navSecurity">安全</a>
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#how" data-i18n="navHow">Quickstart</a>
+        <a href="#security" data-i18n="navSecurity">Security</a>
         <a href="https://github.com/HaolemeApp/Haoleme" target="_blank" rel="noreferrer">GitHub</a>
       </div>
 
       <div class="nav-actions">
         <div class="language-switch" aria-label="Language">
-          <button class="language-option active" type="button" data-lang="zh">中</button>
-          <button class="language-option" type="button" data-lang="en">EN</button>
+          <button class="language-option active" type="button" data-lang="en">EN</button>
+          <button class="language-option" type="button" data-lang="zh">中</button>
         </div>
-        <button class="icon-button" id="theme-toggle" type="button" title="切换主题" aria-label="切换主题">
+        <button class="icon-button" id="theme-toggle" type="button" title="Switch theme" aria-label="Switch theme">
           <i data-lucide="moon" aria-hidden="true"></i>
         </button>
       </div>
@@ -92,33 +92,33 @@
         <div class="hero-copy">
           <p class="eyebrow">
             <span class="status-dot"></span>
-            <span data-i18n="eyebrow">命令在跑，你不必盯着</span>
+            <span data-i18n="eyebrow">Let the command run. Stop watching it.</span>
           </p>
-          <h1><span data-i18n="heroBrand">好了么</span><small data-i18n="heroAlt">Haoleme</small></h1>
-          <p class="hero-lead" data-i18n="heroLead">在手机上查看电脑和服务器里的命令状态、终端输出和设备在线情况。运行结束，立即收到通知。</p>
+          <h1><span data-i18n="heroBrand">Haoleme</span><small data-i18n="heroAlt">好了么</small></h1>
+          <p class="hero-lead" data-i18n="heroLead">Track commands, console output, and device status from your phone. Get notified the moment a job finishes.</p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="https://github.com/HaolemeApp/Haoleme/releases/latest">
               <i data-lucide="download" aria-hidden="true"></i>
-              <span data-i18n="downloadApp">下载 Android App</span>
+              <span data-i18n="downloadApp">Download Android App</span>
             </a>
             <a class="button button-secondary" href="https://github.com/HaolemeApp/Haoleme" target="_blank" rel="noreferrer">
               <i data-lucide="github" aria-hidden="true"></i>
-              <span data-i18n="viewGithub">查看 GitHub</span>
+              <span data-i18n="viewGithub">View on GitHub</span>
             </a>
           </div>
 
           <div class="install-command" aria-label="Install command">
             <span class="prompt">$</span>
             <code>pip install -U haoleme</code>
-            <button class="copy-button" id="copy-install" type="button" title="复制安装命令" aria-label="复制安装命令">
+            <button class="copy-button" id="copy-install" type="button" title="Copy install command" aria-label="Copy install command">
               <i data-lucide="copy" aria-hidden="true"></i>
             </button>
           </div>
 
           <div class="hero-tags" aria-label="Highlights">
             <span><i data-lucide="terminal" aria-hidden="true"></i> CLI</span>
-            <span><i data-lucide="bell" aria-hidden="true"></i> <b data-i18n="tagNotify">完成通知</b></span>
+            <span><i data-lucide="bell" aria-hidden="true"></i> <b data-i18n="tagNotify">Finish alerts</b></span>
             <span><i data-lucide="shield-check" aria-hidden="true"></i> E2EE</span>
           </div>
 
@@ -126,17 +126,17 @@
             <div class="signal-inner">
               <div class="signal-item">
                 <strong>1</strong>
-                <span data-i18n="signalPrefix">个命令前缀</span>
+                <span data-i18n="signalPrefix">command prefix</span>
                 <code>hao</code>
               </div>
               <div class="signal-item">
                 <strong>2</strong>
-                <span data-i18n="signalPair">种配对方式</span>
+                <span data-i18n="signalPair">pairing methods</span>
                 <small>QR · 6-digit</small>
               </div>
               <div class="signal-item">
                 <strong>∞</strong>
-                <span data-i18n="signalDevices">多设备监控</span>
+                <span data-i18n="signalDevices">devices monitored</span>
                 <small>Mac · Linux · Windows</small>
               </div>
             </div>
@@ -153,18 +153,18 @@
             </div>
             <div class="terminal-body">
               <p><span class="term-muted">$</span> hao python train.py</p>
-              <p class="term-muted">好了么 run: 8f42c1</p>
+              <p class="term-muted">Haoleme run: 8f42c1</p>
               <p>Epoch 23/100 <span class="term-blue">loss=0.182</span></p>
               <p><span class="term-success">● running</span> · GPU 0 · 92%</p>
             </div>
           </div>
 
           <div class="phone phone-back" aria-hidden="true">
-            <img data-screenshot="settings" src="assets/screenshots/settings-zh.png" width="1260" height="2800" decoding="async" alt="">
+            <img data-screenshot="settings" src="assets/screenshots/settings-en.png" width="1260" height="2800" decoding="async" alt="">
           </div>
           <div class="phone phone-front">
             <div class="phone-speaker"></div>
-            <img data-screenshot="home" src="assets/screenshots/home-zh.png" width="1260" height="2800" decoding="async" alt="好了么命令运行列表">
+            <img data-screenshot="home" src="assets/screenshots/home-en.png" width="1260" height="2800" decoding="async" alt="Haoleme command run list">
           </div>
         </div>
       </div>
@@ -173,17 +173,17 @@
     <section class="section" id="features">
       <div class="section-inner">
         <div class="section-heading">
-          <p class="section-label" data-i18n="featuresLabel">为什么用好了么</p>
-          <h2 data-i18n="featuresTitle">终端离你很远，状态离你很近。</h2>
-          <p data-i18n="featuresLead">为训练任务、远程脚本、批处理和长时间运行的命令而做。</p>
+          <p class="section-label" data-i18n="featuresLabel">Why Haoleme</p>
+          <h2 data-i18n="featuresTitle">Far from the terminal. Close to the status.</h2>
+          <p data-i18n="featuresLead">Built for training jobs, remote scripts, batch work, and every command that takes a while.</p>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card feature-wide live-card">
             <div class="feature-icon green"><i data-lucide="activity" aria-hidden="true"></i></div>
             <div>
-              <h3 data-i18n="featureLiveTitle">实时运行状态</h3>
-              <p data-i18n="featureLiveBody">运行中、成功、失败一眼看清。设备在线状态、GPU 和 CPU 信息也在同一处。</p>
+              <h3 data-i18n="featureLiveTitle">Live run status</h3>
+              <p data-i18n="featureLiveBody">See running, succeeded, and failed jobs at a glance, alongside device, GPU, and CPU status.</p>
               <div class="status-demo" aria-hidden="true">
                 <span><b class="dot running"></b>running</span>
                 <span><b class="dot success"></b>succeeded</span>
@@ -194,33 +194,33 @@
 
           <article class="feature-card">
             <div class="feature-icon blue"><i data-lucide="square-terminal" aria-hidden="true"></i></div>
-            <h3 data-i18n="featureConsoleTitle">查看运行输出</h3>
-            <p data-i18n="featureConsoleBody">在手机上查看终端输出、搜索关键词，需要时再加载更早记录。</p>
+            <h3 data-i18n="featureConsoleTitle">View run output</h3>
+            <p data-i18n="featureConsoleBody">View terminal output on your phone, search keywords, and load earlier history when needed.</p>
           </article>
 
           <article class="feature-card">
             <div class="feature-icon red"><i data-lucide="bell-ring" aria-hidden="true"></i></div>
-            <h3 data-i18n="featureNotifyTitle">结束时通知</h3>
-            <p data-i18n="featureNotifyBody">不必守着 SSH。命令完成或失败后，手机会告诉你。</p>
+            <h3 data-i18n="featureNotifyTitle">Know when it is done</h3>
+            <p data-i18n="featureNotifyBody">Stop babysitting SSH. Your phone tells you when a command succeeds or fails.</p>
           </article>
 
           <article class="feature-card">
             <div class="feature-icon violet"><i data-lucide="layers-3" aria-hidden="true"></i></div>
-            <h3 data-i18n="featureProjectTitle">项目与设备</h3>
-            <p data-i18n="featureProjectBody">按项目归档运行记录，在多台电脑和服务器之间快速切换。</p>
+            <h3 data-i18n="featureProjectTitle">Projects and devices</h3>
+            <p data-i18n="featureProjectBody">Group runs by project and move quickly between computers and remote servers.</p>
           </article>
 
           <article class="feature-card">
             <div class="feature-icon teal"><i data-lucide="refresh-cw" aria-hidden="true"></i></div>
-            <h3 data-i18n="featureSyncTitle">断网后继续同步</h3>
-            <p data-i18n="featureSyncBody">网络恢复后补传运行记录，本地缓存让历史结果随时可看。</p>
+            <h3 data-i18n="featureSyncTitle">Recover after disconnects</h3>
+            <p data-i18n="featureSyncBody">Runs upload after the network returns, while local cache keeps history available.</p>
           </article>
 
           <article class="feature-card feature-wide security-card">
             <div class="feature-icon dark"><i data-lucide="lock-keyhole" aria-hidden="true"></i></div>
             <div>
-              <h3 data-i18n="featureSecureTitle">敏感内容端到端加密</h3>
-              <p data-i18n="featureSecureBody">命令、路径和控制台内容在设备端加密。云端只负责转发密文。</p>
+              <h3 data-i18n="featureSecureTitle">End-to-end encrypted content</h3>
+              <p data-i18n="featureSecureBody">Commands, paths, and console output are encrypted on your devices. The cloud relays ciphertext.</p>
             </div>
             <div class="cipher" aria-hidden="true">e2ee://7fa9 ·••· a831 ·••· 4c2d</div>
           </article>
@@ -231,36 +231,36 @@
     <section class="section how-section" id="how">
       <div class="section-inner">
         <div class="section-heading compact">
-          <p class="section-label" data-i18n="howLabel">快速开始</p>
-          <h2 data-i18n="howTitle">三步，手机开始看终端。</h2>
+          <p class="section-label" data-i18n="howLabel">Quickstart</p>
+          <h2 data-i18n="howTitle">Three steps from terminal to phone.</h2>
         </div>
 
         <div class="steps">
           <article class="step">
             <span class="step-number">01</span>
             <i data-lucide="package-plus" aria-hidden="true"></i>
-            <h3 data-i18n="stepInstallTitle">安装 CLI</h3>
+            <h3 data-i18n="stepInstallTitle">Install the CLI</h3>
             <code>pip install -U haoleme</code>
           </article>
           <article class="step">
             <span class="step-number">02</span>
             <i data-lucide="scan-qr-code" aria-hidden="true"></i>
-            <h3 data-i18n="stepPairTitle">扫码配对</h3>
+            <h3 data-i18n="stepPairTitle">Scan to pair</h3>
             <code>hao login</code>
           </article>
           <article class="step">
             <span class="step-number">03</span>
             <i data-lucide="play" aria-hidden="true"></i>
-            <h3 data-i18n="stepRunTitle">运行命令</h3>
+            <h3 data-i18n="stepRunTitle">Run a command</h3>
             <code>hao echo hello</code>
           </article>
         </div>
 
         <div class="quick-terminal">
           <div class="quick-terminal-copy">
-            <p class="section-label" data-i18n="terminalLabel">就是这么简单</p>
-            <h3 data-i18n="terminalTitle">只在原命令前加 hao。</h3>
-            <p data-i18n="terminalBody">命令照常在当前终端运行，输出同时安全同步到 App。</p>
+            <p class="section-label" data-i18n="terminalLabel">That is really it</p>
+            <h3 data-i18n="terminalTitle">Put hao before your command.</h3>
+            <p data-i18n="terminalBody">The command still runs in your terminal while its output syncs securely to the app.</p>
           </div>
           <div class="terminal-code" aria-label="Command example">
             <p><span># Python training</span></p>
@@ -277,13 +277,13 @@
     <section class="section security-section" id="security">
       <div class="section-inner security-inner">
         <div class="security-copy">
-          <p class="section-label" data-i18n="securityLabel">安全与开源</p>
-          <h2 data-i18n="securityTitle">你的命令，只有你能看。</h2>
-          <p data-i18n="securityLead">配对码有时效，设备可随时撤销；敏感运行内容采用端到端加密。App 与 CLI 核心代码公开可审计。</p>
+          <p class="section-label" data-i18n="securityLabel">Security and open source</p>
+          <h2 data-i18n="securityTitle">Only you can read your commands.</h2>
+          <p data-i18n="securityLead">Pairing codes expire, devices can be revoked, and sensitive run content is end-to-end encrypted. Core App and CLI code is open for review.</p>
           <div class="security-links">
             <a href="https://github.com/HaolemeApp/Haoleme" target="_blank" rel="noreferrer">
               <i data-lucide="github" aria-hidden="true"></i>
-              <span data-i18n="sourceCode">查看源代码</span>
+              <span data-i18n="sourceCode">View source code</span>
             </a>
             <a href="https://github.com/HaolemeApp/Haoleme/blob/main/LICENSE" target="_blank" rel="noreferrer">
               <i data-lucide="scale" aria-hidden="true"></i>
@@ -292,10 +292,10 @@
           </div>
         </div>
         <div class="security-list">
-          <div><i data-lucide="key-round" aria-hidden="true"></i><span data-i18n="securityE2ee">端到端加密</span></div>
-          <div><i data-lucide="timer" aria-hidden="true"></i><span data-i18n="securityPair">限时配对码</span></div>
-          <div><i data-lucide="monitor-x" aria-hidden="true"></i><span data-i18n="securityRevoke">设备随时撤销</span></div>
-          <div><i data-lucide="eye-off" aria-hidden="true"></i><span data-i18n="securityMask">敏感文本隐藏</span></div>
+          <div><i data-lucide="key-round" aria-hidden="true"></i><span data-i18n="securityE2ee">End-to-end encryption</span></div>
+          <div><i data-lucide="timer" aria-hidden="true"></i><span data-i18n="securityPair">Expiring pairing codes</span></div>
+          <div><i data-lucide="monitor-x" aria-hidden="true"></i><span data-i18n="securityRevoke">Revocable devices</span></div>
+          <div><i data-lucide="eye-off" aria-hidden="true"></i><span data-i18n="securityMask">Sensitive text masking</span></div>
         </div>
       </div>
     </section>
@@ -305,12 +305,12 @@
         <img class="download-icon icon-light" src="assets/haoleme-icon-light.png" alt="">
         <img class="download-icon icon-dark" src="assets/haoleme-icon-dark.png" alt="">
         <div>
-          <p class="section-label" data-i18n="readyLabel">准备好了吗</p>
-          <h2 data-i18n="readyTitle">让终端自己跑，你去做别的。</h2>
+          <p class="section-label" data-i18n="readyLabel">Ready</p>
+          <h2 data-i18n="readyTitle">Let the terminal run. Go do something else.</h2>
         </div>
         <a class="button button-primary" href="https://github.com/HaolemeApp/Haoleme/releases/latest">
           <i data-lucide="download" aria-hidden="true"></i>
-          <span data-i18n="downloadLatest">下载最新版</span>
+          <span data-i18n="downloadLatest">Download latest</span>
         </a>
       </div>
     </section>
@@ -319,17 +319,17 @@
   <footer>
     <div class="footer-inner">
       <div>
-        <strong data-i18n="brand">好了么</strong>
-        <p data-i18n="footerText">命令运行监控，从终端到手机。</p>
+        <strong data-i18n="brand">Haoleme</strong>
+        <p data-i18n="footerText">Command monitoring, from terminal to phone.</p>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/HaolemeApp/Haoleme/releases/latest" data-i18n="footerDownload">下载</a>
+        <a href="https://github.com/HaolemeApp/Haoleme/releases/latest" data-i18n="footerDownload">Download</a>
         <a href="https://pypi.org/project/haoleme/">PyPI</a>
         <a href="https://github.com/HaolemeApp/Haoleme">GitHub</a>
         <a href="https://github.com/HaolemeApp/Haoleme/issues">Issues</a>
       </div>
       <p class="official-addresses">
-        <span data-i18n="officialWebsiteLabel">官网</span><span>:</span>
+        <span data-i18n="officialWebsiteLabel">Website</span><span>:</span>
         <a href="https://haolemeapp.github.io/">https://haolemeapp.github.io/</a>
         <span aria-hidden="true">·</span>
         <span>GitHub:</span>
@@ -339,7 +339,7 @@
     </div>
   </footer>
 
-  <div class="toast" id="copy-toast" role="status" aria-live="polite" data-i18n="copied">安装命令已复制</div>
+  <div class="toast" id="copy-toast" role="status" aria-live="polite" data-i18n="copied">Install command copied</div>
   <script src="assets/lucide.min.js"></script>
   <script src="script.js"></script>
 </body>
